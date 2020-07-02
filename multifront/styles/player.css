@@ -1,14 +1,39 @@
 .Player {
-  margin-top: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .PlayerIMG img {
-  width: 40%;
-  height: 40%;
+  width: 100%;
 }
 
 .PlayerIMG {
   float: left;
+  width: 15%;
+}
+
+.Playercomponent {
+  width: 75%;
+}
+
+.Basicstats {
+  width: 100%;
+}
+
+.Playerdesc {
+  float: left;
+  margin-right: 5%;
+}
+
+.OverallKD {
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.ModeKD {
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
 }
