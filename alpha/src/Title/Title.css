@@ -1,4 +1,18 @@
 .Title {
   text-align: center;
-  margin-bottom: 5%;
+  padding-bottom: 12px;
+  margin-bottom: 1%;
+  color: white;
+  background-color: black;
+}
+
+.Header {
+  font-size: 250%;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.Title body {
+  padding-top: 5px;
+  font-size: 75%;
 }

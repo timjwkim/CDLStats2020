@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 
 var players = [];
+var overalls = [];
 
 // GOOGLE SHEETS API STUFF
 const fs = require('fs');
@@ -87,10 +88,15 @@ function listMajors(auth) {
     if (rows.length) {
       // Print columns A and E, which correspond to indices 0 and 4.
       rows.map((row) => {
-        var overall = {playerName:`${row[0]}`, team:`${row[2]}`, role: `${row[3]}`,
+        var basic = {playerName:`${row[0]}`, team:`${row[2]}`, role: `${row[3]}`,
                        overallKD: `${row[6]}`, hpKD: `${row[25]}`,
                        sndKD: `${row[51]}`, domKD: `${row[93]}`};
-        players.push(overall);
+        players.push(basic);
+
+        var overall = {playerName:`${row[0]}`, team:`${row[2]}`, role: `${row[3]}`,
+                       kills: `${row[4]}`, deaths: `${row[5]}`, kd: `${row[6]}`,
+                       plusMinus: `${row[7]}`, aKD: `${row[8]}`, slayRate: `${row[9]}`};
+        overalls.push(overall);
       });
     } else {
       console.log('No data found.');
@@ -104,6 +110,10 @@ app.get('/', (req, res) => {
 
 app.get('/players', (req, res) => {
   res.send(players);
+});
+
+app.get('/overall', (req, res) => {
+  res.send(overalls);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

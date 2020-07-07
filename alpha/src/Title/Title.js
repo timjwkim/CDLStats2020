@@ -6,7 +6,10 @@ export default class Title extends React.Component {
   render() {
     return (
       <div className="Title">
-        Call of Duty League 2020 Stats Tracker
+        <div className="Header">
+          Call of Duty League 2020 Stats Tracker
+        </div>
+        <body><b1>*stats provided by Activision's Call of Duty League and tracked by Easy Mac (twitter @Its_EasyMac)</b1></body>
       </div>
     );
   }

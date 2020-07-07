@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ReactTable from 'react-table-6';
 import 'react-table-6/react-table.css';
+import './Basic.css';
 
 export default class Basic extends React.Component {
 
@@ -58,8 +59,8 @@ export default class Basic extends React.Component {
     ]
 
     return (
-      <div className="Players">
-        <ReactTable columns={columns} data={this.state.players} filterable>
+      <div className="Basic">
+        <ReactTable className="Basictable" columns={columns} data={this.state.players} filterable>
         </ReactTable>
       </div>
     );
