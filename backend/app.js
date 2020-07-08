@@ -4,6 +4,9 @@ const port = 5000;
 
 var players = [];
 var overalls = [];
+var hps = [];
+var snds = [];
+var doms = [];
 
 // GOOGLE SHEETS API STUFF
 const fs = require('fs');
@@ -97,6 +100,21 @@ function listMajors(auth) {
                        kills: `${row[4]}`, deaths: `${row[5]}`, kd: `${row[6]}`,
                        plusMinus: `${row[7]}`, aKD: `${row[8]}`, slayRate: `${row[9]}`};
         overalls.push(overall);
+
+        var hp = {playerName: `${row[0]}`, team: `${row[2]}`, role: `${row[3]}`,
+                  hiKills: `${row[16]}`, kp10m: `${row[18]}`, ep10m: `${row[20]}`,
+                  kd: `${row[25]}`, htpgt: `${row[34]}`, trueES: `${row[36]}`, games: `${row[37]}`};
+        hps.push(hp);
+
+        var snd = {playerName: `${row[0]}`, team: `${row[2]}`, kpg: `${row[44]}`,
+                   hiKills: `${row[46]}`, dpg: `${row[48]}`, kd: `${row[51]}`,
+                   opDuels: `${row[60]}`, opDP: `${row[62]}`, games: `${row[74]}`, rounds: `${row[75]}`};
+        snds.push(snd);
+
+        var dom = {playerName: `${row[0]}`, team: `${row[2]}`, role: `${row[3]}`,
+                   kpg: `${row[82]}`, hiKills: `${row[83]}`, epg: `${row[90]}`,
+                   kd: `${row[93]}`, cpg: `${row[98]}`, trueES:`${row[102]}`};
+        doms.push(dom);
       });
     } else {
       console.log('No data found.');
@@ -114,6 +132,18 @@ app.get('/players', (req, res) => {
 
 app.get('/overall', (req, res) => {
   res.send(overalls);
+});
+
+app.get('/hardpoint', (req, res) => {
+  res.send(hps);
+});
+
+app.get('/search', (req, res) => {
+  res.send(snds);
+});
+
+app.get('/domination', (req, res) => {
+  res.send(doms);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

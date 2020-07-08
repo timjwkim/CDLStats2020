@@ -3,6 +3,7 @@ import axios from 'axios';
 import ReactTable from 'react-table-6';
 import 'react-table-6/react-table.css';
 import './Overall.css';
+import '../Table/Table.css';
 
 export default class Overall extends React.Component {
   constructor(props) {
@@ -69,7 +70,7 @@ export default class Overall extends React.Component {
 
     return (
       <div className="Overall">
-        <ReactTable className="Ovrtable" columns={columns} data={this.state.players} filterable>
+        <ReactTable className="Table" columns={columns} data={this.state.players} filterable>
         </ReactTable>
       </div>
     );
