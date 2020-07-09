@@ -10,9 +10,11 @@
   font-size: 250%;
   font-weight: bold;
   padding-top: 10px;
+  font-family: 'Black Ops One', cursive;
 }
 
 .Title body {
   padding-top: 5px;
   font-size: 75%;
+  font-family: 'Quantico', sans-serif;
 }

@@ -2,18 +2,24 @@
   text-align: center;
 }
 
-.Basic-button {
-  transition-duration: 0.2s;
-  border: 1px solid black;
-}
-
-.Basic-button:hover {
-  background-color: grey;
-  color: white;
-}
-
-.Ovr-button {
-  background-color: white;
-  transition-duration: 0.2s;
+.Button {
   border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: 'Quantico', sans-serif;
+}
+
+.Disbutton {
+  border: none;
+  background-color: dimgrey;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: 'Quantico', sans-serif;
 }

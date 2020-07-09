@@ -38,22 +38,22 @@ export default class Basic extends React.Component {
         sortable: false
       },
       {
-        Header: "Overall KD",
+        Header: "Ovr KD",
         accessor: "overallKD",
         filterable: false
       },
       {
-        Header: "Hardpoint KD",
+        Header: "HP KD",
         accessor: "hpKD",
         filterable: false
       },
       {
-        Header: "Search and Destroy KD",
+        Header: "SnD KD",
         accessor: "sndKD",
         filterable: false
       },
       {
-        Header: "Domination KD",
+        Header: "Dom KD",
         accessor: "domKD",
         filterable: false
       }

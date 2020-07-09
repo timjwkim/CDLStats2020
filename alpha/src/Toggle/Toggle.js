@@ -12,20 +12,20 @@ export default class Toggle extends React.Component {
   }
 
   render() {
-    if (this.state.whichComponentToShow == 'Basic') {
+    if (this.state.whichComponentToShow === 'Basic') {
       return (
         <div className="Toggle">
-          <button className="Basic-button" disabled={true}>Basic</button>
-          <button className="Ovr-button" onClick={() => {
+          <button className="Disbutton" disabled={true}>Basic</button>
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Overall" });
             }}>Overall</button>
-          <button className="Hp-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Hardpoint" });
             }}>Hardpoint</button>
-          <button className="Snd-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Search" });
             }}>Search and Destroy</button>
-          <button className="Dom-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Domination" });
             }}>Domination</button>
           <Basic/>
@@ -33,20 +33,20 @@ export default class Toggle extends React.Component {
       );
     }
 
-    else if (this.state.whichComponentToShow == 'Overall') {
+    else if (this.state.whichComponentToShow === 'Overall') {
       return (
         <div className="Toggle">
-          <button className="Basic-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Basic" });
             }}>Basic</button>
-          <button className="Ovr-button" disabled={true}>Overall</button>
-          <button className="Hp-button" onClick={() => {
+          <button className="Disbutton" disabled={true}>Overall</button>
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Hardpoint" });
             }}>Hardpoint</button>
-          <button className="Snd-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Search" });
             }}>Search and Destroy</button>
-          <button className="Dom-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Domination" });
             }}>Domination</button>
           <Overall/>
@@ -54,20 +54,20 @@ export default class Toggle extends React.Component {
       )
     }
 
-    else if (this.state.whichComponentToShow == 'Hardpoint') {
+    else if (this.state.whichComponentToShow === 'Hardpoint') {
       return (
         <div className="Toggle">
-          <button className="Basic-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Basic" });
             }}>Basic</button>
-          <button className="Ovr-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Overall" });
             }}>Overall</button>
-          <button className="Hp-button" disabled={true}>Hardpoint</button>
-          <button className="Snd-button" onClick={() => {
+          <button className="Disbutton" disabled={true}>Hardpoint</button>
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Search" });
             }}>Search and Destroy</button>
-          <button className="Dom-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Domination" });
             }}>Domination</button>
           <Hardpoint/>
@@ -75,20 +75,20 @@ export default class Toggle extends React.Component {
       )
     }
 
-    else if (this.state.whichComponentToShow == 'Search') {
+    else if (this.state.whichComponentToShow === 'Search') {
       return (
         <div className="Toggle">
-          <button className="Basic-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Basic" });
             }}>Basic</button>
-          <button className="Ovr-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Overall" });
             }}>Overall</button>
-          <button className="Hp-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Hardpoint" });
             }}>Hardpoint</button>
-          <button className="Snd-button" disabled={true}>Search and Destroy</button>
-          <button className="Dom-button" onClick={() => {
+          <button className="Disbutton" disabled={true}>Search and Destroy</button>
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Domination" });
             }}>Domination</button>
           <Search/>
@@ -96,22 +96,22 @@ export default class Toggle extends React.Component {
       )
     }
 
-    else if (this.state.whichComponentToShow == 'Domination') {
+    else if (this.state.whichComponentToShow === 'Domination') {
       return (
         <div className="Toggle">
-          <button className="Basic-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Basic" });
             }}>Basic</button>
-          <button className="Ovr-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Overall" });
             }}>Overall</button>
-          <button className="Hp-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Hardpoint" });
             }}>Hardpoint</button>
-          <button className="Snd-button" onClick={() => {
+          <button className="Button" onClick={() => {
               this.setState({ whichComponentToShow: "Search" });
             }}>Search and Destroy</button>
-          <button className="Dom-button" disabled={true}>Domination</button>
+          <button className="Disbutton" disabled={true}>Domination</button>
           <Domination/>
         </div>
       )
